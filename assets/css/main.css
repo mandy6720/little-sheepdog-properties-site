@@ -4011,8 +4011,12 @@ input, select, textarea {
 		}
 
 /* Footer */
+	#footer .footer-overlay {
+		background-color: #0007;
+	}
+
 	#footer .inner {
-		padding: 5em 1em 3em;
+		padding: 5em 0 3em 0 ;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -4027,8 +4031,6 @@ input, select, textarea {
 		flex-wrap: wrap;
 		margin: 0 auto;
 		width: 55em;
-		background-color: #0007;
-
 	}
 
 		#footer .inner > * {
@@ -4082,8 +4084,8 @@ input, select, textarea {
  cover;
 			background-position: center,
  center;
-			margin-top: -6.5em;
-			padding-top: 6.5em;
+			/* margin-top: -6.5em; */
+			/* padding-top: 6.5em; */
 		}
 
 	}
@@ -4091,8 +4093,8 @@ input, select, textarea {
 	@media screen and (max-width: 980px) {
 
 		#footer {
-			margin-top: -4.75em;
-			padding-top: 4.75em;
+			/* margin-top: -4.75em;
+			padding-top: 4.75em; */
 		}
 
 			#footer .inner {
@@ -4120,8 +4122,8 @@ input, select, textarea {
 	@media screen and (max-width: 736px) {
 
 		#footer {
-			margin-top: -2.5em;
-			padding-top: 2.5em;
+			/* margin-top: -2.5em;
+			padding-top: 2.5em; */
 		}
 
 			#footer .inner {
