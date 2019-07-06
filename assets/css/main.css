@@ -2380,6 +2380,10 @@ input, select, textarea {
 		position: relative;
 	}
 
+		.icon.aussie-dog {
+			background-image: url("images/aussie.svg");
+		}
+
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
@@ -4157,7 +4161,7 @@ input, select, textarea {
 	}
 
 	#footer {
-		background-image: url('images/land.jpg');
+		background-image: url('images/bg-hills.svg');
 		background-size: cover;
 	}
 
