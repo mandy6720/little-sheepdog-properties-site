@@ -2241,6 +2241,7 @@ input, select, textarea {
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="tel"],
 	select {
 		height: 2.75em;
 	}
@@ -4011,7 +4012,7 @@ input, select, textarea {
 
 /* Footer */
 	#footer .inner {
-		padding: 5em 0 3em 0 ;
+		padding: 5em 1em 3em;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
