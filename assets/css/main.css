@@ -2241,6 +2241,7 @@ input, select, textarea {
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="tel"],
 	select {
 		height: 2.75em;
 	}
@@ -2379,6 +2380,10 @@ input, select, textarea {
 		border-bottom: none;
 		position: relative;
 	}
+
+		.icon.aussie-dog {
+			background-image: url("images/aussie.svg");
+		}
 
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
@@ -4006,6 +4011,10 @@ input, select, textarea {
 		}
 
 /* Footer */
+	#footer .footer-overlay {
+		background-color: #0007;
+	}
+
 	#footer .inner {
 		padding: 5em 0 3em 0 ;
 		display: -moz-flex;
@@ -4022,8 +4031,6 @@ input, select, textarea {
 		flex-wrap: wrap;
 		margin: 0 auto;
 		width: 55em;
-		background-color: #0007;
-
 	}
 
 		#footer .inner > * {
@@ -4077,8 +4084,8 @@ input, select, textarea {
  cover;
 			background-position: center,
  center;
-			margin-top: -6.5em;
-			padding-top: 6.5em;
+			/* margin-top: -6.5em; */
+			/* padding-top: 6.5em; */
 		}
 
 	}
@@ -4086,8 +4093,8 @@ input, select, textarea {
 	@media screen and (max-width: 980px) {
 
 		#footer {
-			margin-top: -4.75em;
-			padding-top: 4.75em;
+			/* margin-top: -4.75em;
+			padding-top: 4.75em; */
 		}
 
 			#footer .inner {
@@ -4115,8 +4122,8 @@ input, select, textarea {
 	@media screen and (max-width: 736px) {
 
 		#footer {
-			margin-top: -2.5em;
-			padding-top: 2.5em;
+			/* margin-top: -2.5em;
+			padding-top: 2.5em; */
 		}
 
 			#footer .inner {
@@ -4157,7 +4164,7 @@ input, select, textarea {
 	}
 
 	#footer {
-		background-image: url('images/land.jpg');
+		background-image: url('images/bg-hills.svg');
 		background-size: cover;
 	}
 
