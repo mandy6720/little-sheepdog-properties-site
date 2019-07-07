@@ -4,7 +4,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 
 <head>
 	<title>Little Sheepdog Properties</title>
@@ -145,7 +145,7 @@
 					<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce
 						tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus.
 						Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-					<form method="post" action="mailto:amanda.hewitt01@gmail.com" enctype="text/plain">
+					<form id="contact-form">
 						<div class="fields">
 							<div class="field">
 								<label for="name">Full Name</label>
@@ -165,7 +165,7 @@
 							</div>
 						</div>
 						<ul class="actions">
-							<li><input type="submit" value="Send Message" /></li>
+							<li><button id="submit">Send Message</button></li>
 						</ul>
 					</form>
 					<ul class="contact">
@@ -192,6 +192,25 @@
 	</div>
 
 	<!-- Scripts -->
+	<script>
+		const sendMail = (data) => {
+			window.open(`mailto:amanda.hewitt01@gmail.com?subject=LittleSheepdogProperties&body=${data.join(`\n`)}`);
+		}
+
+		const formatFormData = (data) => {
+			const formValues = Object.values(data).map(field => `${field.name}: ${field.value}`);
+			sendMail(formValues);
+		};
+
+		document.querySelector("#submit").addEventListener('click', function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			e.stopImmediatePropagation();
+			const formData = document.getElementById('contact-form').elements;
+			formatFormData(formData);
+			return false;
+		});
+	</script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
