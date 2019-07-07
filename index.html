@@ -145,7 +145,7 @@
 					<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce
 						tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus.
 						Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-					<form id="contact-form">
+					<form id="contact-form" action="https://formspree.io/amanda.hewitt01@gmail.com" method="POST" >
 						<div class="fields">
 							<div class="field">
 								<label for="name">Full Name</label>
@@ -165,16 +165,15 @@
 							</div>
 						</div>
 						<ul class="actions">
-							<li><button id="submit">Send Message</button></li>
+							<li><input id="submit" value="Send Message" type="submit"></input></li>
 						</ul>
 					</form>
 					<ul class="contact">
 						<li class="icon solid fa-home">
 							Little Sheepdog Properties<br />
-							1234 Somewhere Road Suite #2894<br />
 							Alexandria, VA 22314
 						</li>
-						<li class="icon solid fa-phone">(000) 000-0000</li>
+						<!-- <li class="icon solid fa-phone">(000) 000-0000</li> -->
 						<li class="icon solid fa-envelope"><a
 								href="mailto:amanda.hewitt01@gmail.com">contact@littlesheepdogproperties.com</a></li>
 						<!-- <li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
@@ -192,25 +191,6 @@
 	</div>
 
 	<!-- Scripts -->
-	<script>
-		const sendMail = (data) => {
-			window.open(`mailto:amanda.hewitt01@gmail.com?subject=LittleSheepdogProperties&body=${data.join(`\n`)}`);
-		}
-
-		const formatFormData = (data) => {
-			const formValues = Object.values(data).map(field => `${field.name}: ${field.value}`);
-			sendMail(formValues);
-		};
-
-		document.querySelector("#submit").addEventListener('click', function(e) {
-			e.preventDefault();
-			e.stopPropagation();
-			e.stopImmediatePropagation();
-			const formData = document.getElementById('contact-form').elements;
-			formatFormData(formData);
-			return false;
-		});
-	</script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
