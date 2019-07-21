@@ -2138,7 +2138,7 @@ input, select, textarea {
 					width: calc(25% - 0.375em);
 				}
 
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 768px) {
 
 			form > .fields {
 				width: calc(100% + 3em);
@@ -4037,14 +4037,16 @@ input, select, textarea {
 			width: 100%;
 		}
 
-		#footer .inner form {
-			margin: 0 3em 0 0;
-			width: calc(50% - 1.5em);
-		}
+		/* @media screen and (min-width: 768px) {
+			#footer .inner form {
+				margin: 0 3em 0 0;
+				width: calc(50% - 1.5em);
+			}
 
-		#footer .inner .contact {
-			width: calc(50% - 1.5em);
-		}
+			#footer .inner .contact {
+				width: calc(50% - 1.5em);
+			}
+		} */
 
 		#footer .inner .copyright {
 			border-top: solid 2px rgba(255, 255, 255, 0.125);
