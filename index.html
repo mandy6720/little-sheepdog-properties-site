@@ -143,9 +143,11 @@
 				<div class="inner">
 					<h2 class="major">Get in touch</h2>
 					<p>Want to sell your property? Great! We just need a bit more information:</p>
-					<form id="contact-form" action="https://formspree.io/amanda.hewitt01@gmail.com" method="POST" >
+					<form id="contact-form" action="https://formspree.io/amanda.hewitt01@gmail.com" method="POST">
 						<div class="fields">
-							<div class="field"><h3>About you:</h3></div>
+							<div class="field">
+								<h3>About you:</h3>
+							</div>
 							<div class="field">
 								<label for="name">Name (First and Last)</label>
 								<input type="text" name="name" id="name" />
@@ -174,6 +176,107 @@
 								<label for="zip">Zipcode</label>
 								<input name="zip" id="zip" type="text" />
 							</div>
+							<div class="field">
+								<h3>About the property:</h3>
+							</div>
+							<div class="field">
+								<label for="property-address">Address</label>
+								<input name="property-address" id="property-address" type="text" />
+							</div>
+							<div class="field half">
+								<label for="property-city">City</label>
+								<input name="property-city" id="property-city" type="text" />
+							</div>
+							<div class="field quarter">
+								<label for="property-state">State</label>
+								<input name="property-state" id="property-state" type="text" />
+							</div>
+							<div class="field quarter">
+								<label for="property-zip">Zipcode</label>
+								<input name="property-zip" id="property-zip" type="text" />
+							</div>
+
+							<div class="field half">
+								<label for="market-value">Estimated Market Value</label>
+								<input name="market-value" id="market-value" type="text" />
+							</div>
+							<div class="field half">
+								<label for="parcel-number">Parcel Number</label>
+								<input name="parcel-number" id="parcel-number" type="text" />
+							</div>
+							<div class="field">
+								<label for="parcel-size">Parcel Size & Dimensions</label>
+								<input name="parcel-size" id="parcel-size" type="text" />
+							</div>
+							<div class="field third">
+								<label>Do you have any mortgages on this property?</label>
+								<div>
+									<input type="radio" id="mortgagedYes" name="hasMortgage" value="yes">
+									<label for="mortgagedYes">Yes</label>
+									<input type="radio" id="mortgagedNo" name="hasMortgage" value="no">
+									<label for="mortgagedNo">No</label>
+								</div>
+							</div>
+							<div class="field third">
+								<label>Are all the property taxes paid current?</label>
+								<div>
+									<input type="radio" id="taxesPaidYes" name="taxesPaid" value="yes">
+									<label for="taxesPaidYes">Yes</label>
+									<input type="radio" id="taxesPaidNo" name="taxesPaid" value="no">
+									<label for="taxesPaidNo">No</label>
+								</div>
+							</div>
+							<div class="field third">
+								<label>Is this property part of a Home Owner’s Association?</label>
+								<div>
+									<input type="radio" id="HoaYes" name="HOA" value="yes">
+									<label for="HoaYes">Yes</label>
+									<input type="radio" id="HoaNo" name="HOA" value="no">
+									<label for="HoaNo">No</label>
+								</div>
+							</div>
+							<div class="field">
+								<label for="utilities">What utilities does this property have access to (water, sewer, electricity, natural gas, etc)?</label>
+								<input name="utilities" id="utilities" type="text" />
+							</div>
+							<div class="field quarter">
+								<label>Does this property have road access (paved or dirt)?</label>
+								<div>
+									<input type="radio" id="roadAccessYes" name="roadAccess" value="yes">
+									<label for="roadAccessYes">Yes</label>
+									<input type="radio" id="roadAccessNo" name="roadAccess" value="no">
+									<label for="roadAccessNo">No</label>
+								</div>
+							</div>
+							<div class="field half">
+								<label>On a scale of 1 – 5, what is your level of motivation to sell this property (1 being least motivated and 5 being most)?</label>
+								<div>
+									<input type="radio" id="motivation1" name="motivation" value="1">
+									<label for="motivation1">1</label>
+									<input type="radio" id="motivation2" name="motivation" value="2">
+									<label for="motivation2">2</label>
+									<input type="radio" id="motivation3" name="motivation" value="3">
+									<label for="motivation3">3</label>
+									<input type="radio" id="motivation4" name="motivation" value="4">
+									<label for="motivation4">4</label>
+									<input type="radio" id="motivation5" name="motivation" value="5">
+									<label for="motivation5">5</label>
+								</div>
+							</div>
+							<div class="field quarter">
+								<label>Is this property currently listed on the MLS?</label>
+								<div>
+									<input type="radio" id="mlsYes" name="onTheMLS" value="yes">
+									<label for="mlsYes">Yes</label>
+									<input type="radio" id="mlsNo" name="onTheMLS" value="no">
+									<label for="mlsNo">No</label>
+								</div>
+							</div>
+							<div class="field">
+								<label for="otherInfo">Is there anything else you’d like to tell us?</label>
+								<textarea name="otherInfo" id="otherInfo" rows="4" ></textarea>
+							</div>
+
 							<div class="field">
 								<input id="submit" value="Send Message" type="submit"></input>
 							</div>
