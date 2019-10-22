@@ -1,5 +1,7 @@
 # Little Sheepdog Properties Website
 
+Can be seen live at http://littlesheepdogproperties.com
+
 ## Template Info
 
 Solid State by HTML5 UP
