@@ -142,22 +142,23 @@
 			<div class="footer-overlay">
 				<div class="inner">
 					<h2 class="major">Get in touch</h2>
-					<p>Want to sell your property? Great! We just need a bit more information to get the proccess started:</p>
+					<p>Want to sell your property? Great! We just need a bit more information to get the process started:</p>
+					<p>(Note: fields marked with * are required fields)</p>
 					<form id="contact-form" action="https://formspree.io/amanda.hewitt01@gmail.com" method="POST">
 						<div class="fields">
 							<div class="field">
 								<h3>About you:</h3>
 							</div>
 							<div class="field half">
-								<label for="name">First Name</label>
+								<label for="name">First Name*</label>
 								<input type="text" name="first" id="first" required />
 							</div>
 							<div class="field half">
-								<label for="name">Last Name</label>
+								<label for="name">Last Name*</label>
 								<input type="text" name="last" id="last" required />
 							</div>
 							<div class="field half">
-								<label for="email">Email</label>
+								<label for="email">Email*</label>
 								<input type="email" name="email" id="email" required />
 							</div>
 							<div class="field half">
@@ -165,19 +166,19 @@
 								<input type="tel" name="phone" id="phone" required />
 							</div>
 							<div class="field">
-								<label for="address">Address</label>
+								<label for="address">Address*</label>
 								<input name="address" id="address" type="text" required />
 							</div>
 							<div class="field half">
-								<label for="city">City</label>
+								<label for="city">City*</label>
 								<input name="city" id="city" type="text" required />
 							</div>
 							<div class="field quarter">
-								<label for="state">State</label>
+								<label for="state">State*</label>
 								<input name="state" id="state" type="text" required />
 							</div>
 							<div class="field quarter">
-								<label for="zip">Zipcode</label>
+								<label for="zip">Zipcode*</label>
 								<input name="zip" id="zip" type="text" required />
 							</div>
 							<div class="field">
@@ -201,7 +202,7 @@
 							</div>
 
 							<div class="field half">
-								<label for="market-value">Estimated Market Value</label>
+								<label for="market-value">Estimated Market Value*</label>
 								<input name="market-value" id="market-value" type="text" required />
 							</div>
 							<div class="field half">
@@ -209,11 +210,11 @@
 								<input name="parcel-number" id="parcel-number" type="text" />
 							</div>
 							<div class="field">
-								<label for="parcel-size">Parcel Size & Dimensions</label>
+								<label for="parcel-size">Parcel Size & Dimensions*</label>
 								<input name="parcel-size" id="parcel-size" type="text" />
 							</div>
 							<div class="field third">
-								<label>Do you have any mortgages on this property?</label>
+								<label>Do you have any mortgages on this property?*</label>
 								<div>
 									<input type="radio" id="mortgagedYes" name="hasMortgage" value="yes">
 									<label for="mortgagedYes">Yes</label>
@@ -231,7 +232,7 @@
 								</div>
 							</div>
 							<div class="field third">
-								<label>Is this property part of a Home Owner’s Association?</label>
+								<label>Is this property part of a Home Owner’s Association?*</label>
 								<div>
 									<input type="radio" id="HoaYes" name="HOA" value="yes">
 									<label for="HoaYes">Yes</label>
@@ -268,7 +269,7 @@
 								</div>
 							</div>
 							<div class="field quarter">
-								<label>Is this property currently listed on the MLS?</label>
+								<label>Is this property currently listed on the MLS or with a Realtor?*</label>
 								<div>
 									<input type="radio" id="mlsYes" name="onTheMLS" value="yes">
 									<label for="mlsYes">Yes</label>
@@ -318,21 +319,7 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-	<script>
-		function submitForm() {
-			const first = document.getElementById("first").value;
-			const last = document.getElementById("last").value;
-			const email = document.getElementById("email").value;
-			const marketValue = document.getElementById("market-value").value;
-			console.log("ok sending the offer!")
-			$.post(
-				"https://damp-stream-29490.herokuapp.com/send-email",
-				{first, last, email, marketValue},
-				function(data) {console.log("success!", {first, last, email, marketValue})}
-			)
-			document.getElementById('contact-form').submit();
-		}
-	</script>
+	<script src="assets/js/form.js"></script>
 </body>
 
 </html>
