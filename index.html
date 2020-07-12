@@ -327,7 +327,7 @@
 			$.post(
 				"https://damp-stream-29490.herokuapp.com/send-email",
 				{first, last, email, marketValue},
-				function(data) {console.log("success!", data)}
+				function(data) {console.log("success!", {first, last, email, marketValue})}
 			)
 			document.getElementById('contact-form').submit();
 		}
