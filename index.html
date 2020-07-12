@@ -325,7 +325,7 @@
 			const marketValue = document.getElementById("market-value").value;
 			console.log("ok sending the offer!")
 			$.post(
-				"https://damp-stream-29490.herokuapp.com/send-mail",
+				"https://damp-stream-29490.herokuapp.com/send-email",
 				{first, last, email, marketValue},
 				function(data) {console.log("success!", data)}
 			)
