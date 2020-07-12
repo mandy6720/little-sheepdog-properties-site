@@ -143,14 +143,18 @@
 				<div class="inner">
 					<h2 class="major">Get in touch</h2>
 					<p>Want to sell your property? Great! We just need a bit more information to get the proccess started:</p>
-					<form id="contact-form" action="https://formspree.io/amanda.hewitt01@gmail.com" method="POST">
+					<form id="contact-form" action="https://formspree.io/amanda.hewitt01@gmail.com" method="POST" onsubmit="return submitForm()">
 						<div class="fields">
 							<div class="field">
 								<h3>About you:</h3>
 							</div>
-							<div class="field">
-								<label for="name">Name (First and Last)</label>
-								<input type="text" name="name" id="name" required />
+							<div class="field half">
+								<label for="name">First Name</label>
+								<input type="text" name="first" id="first" required />
+							</div>
+							<div class="field half">
+								<label for="name">Last Name</label>
+								<input type="text" name="last" id="last" required />
 							</div>
 							<div class="field half">
 								<label for="email">Email</label>
@@ -313,7 +317,19 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-
+	<script>
+		function submitForm() {
+			const first = document.getElementById("first").value;
+			const last = document.getElementById("last").value;
+			const email = document.getElementById("email").value;
+			const marketValue = document.getElementById("market-value").value;
+			$.post(
+				"https://damp-stream-29490.herokuapp.com/send-mail",
+				{first, last, email, marketValue},
+				function(data) {console.log("success!", data)}
+			)
+		}
+	</script>
 </body>
 
 </html>
