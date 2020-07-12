@@ -282,7 +282,7 @@
 							</div>
 
 							<div class="field">
-								<input id="submit" value="Send Message" type="submit"></input>
+								<input id="submit" value="Send Message" onclick="submitForm();" type="button"></input>
 							</div>
 						</div>
 						<!-- <ul class="actions">
@@ -323,11 +323,13 @@
 			const last = document.getElementById("last").value;
 			const email = document.getElementById("email").value;
 			const marketValue = document.getElementById("market-value").value;
+			console.log("ok sending the offer!")
 			$.post(
 				"https://damp-stream-29490.herokuapp.com/send-mail",
 				{first, last, email, marketValue},
 				function(data) {console.log("success!", data)}
 			)
+			document.getElementById('contact-form').submit();
 		}
 	</script>
 </body>
