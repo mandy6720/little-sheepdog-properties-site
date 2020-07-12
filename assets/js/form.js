@@ -1,5 +1,5 @@
 
-function submitForm() {
+function submitForm(first, last, email, marketValue) {
   $.post(
     "https://damp-stream-29490.herokuapp.com/send-email",
     { first, last, email, marketValue },
@@ -14,7 +14,7 @@ function validateForm() {
   const email = document.getElementById("email").value;
   const marketValue = document.getElementById("market-value").value;
   if (first && last && email && marketValue) {
-    submitForm();
+    submitForm(first, last, email, marketValue);
   } else {
     alert("Please fill out all required fields before submitting")
   }
