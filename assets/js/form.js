@@ -4,8 +4,9 @@ function submitForm(first, last, email, parcelSize, propertyZip) {
   const propertyCity = document.getElementById("property-city").value;
   const propertyState = document.getElementById("property-state").value;
   const propertyType = document.getElementById("property-type").value;
-  const mortage = document.getElementById("mortgagedYes").value || document.getElementById("mortgagedNo").value;
-  const taxesPaid = document.getElementById("taxesPaidYes").value || document.getElementById("taxesPaidNo").value;
+  let mortage, taxesPaid;
+  document.getElementsByName("hasMortgage").forEach(el => el.checked ? mortage = el.value : null)
+  document.getElementsByName("taxesPaid").forEach(el => el.checked ? taxesPaid = el.value : null)
 
   $.post(
     "https://damp-stream-29490.herokuapp.com/form-info",
@@ -14,8 +15,7 @@ function submitForm(first, last, email, parcelSize, propertyZip) {
       console.log("success!",
       { first, last, email, phone, propertyCity, propertyState, propertyZip, parcelSize, propertyType, mortage, taxesPaid })
     }
-  )
-  // document.getElementById('contact-form').submit();
+  );
 }
 
 function validateForm() {
